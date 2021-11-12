@@ -1,4 +1,4 @@
-
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 <h1><%= @list.name %></h1>
 <%= pluralize(@list.movies.size, 'movie') %>
 <%= "You haven't saved any movies yet!" if @list.movies.empty? %>
@@ -32,5 +32,3 @@
 <%= f.input :rating, as: :select, collection: (1..5), required: true, prompt: "What's your rating", input_html: { id: 'review_rating' } %>
 <%= f.submit class:'btn btn-flat' %>
 <% end %>
-
-  <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
